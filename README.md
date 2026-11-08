@@ -2,7 +2,7 @@
 
 Laboratório acadêmico em português, no formato de um chat. A página calcula com regras locais sobre uma amostra pequena e fictícia em dólares. Não é um banco, não movimenta dinheiro e não está ligada a Plaid, Pluggy, MCP ou a um modelo generativo.
 
-Isto é a **Etapa 1** apenas: dados locais, sem credenciais. A Etapa 2 (backend que consultaria um sandbox) **não foi construída**. Esta entrega é uma alternativa em código. Não houve uso nem exportação do Lovable, e o prompt de referência deste repositório **não foi enviado** ao Lovable. A aceitação externa do trabalho, no curso ou em outro lugar, não está garantida. A publicação da página está **pendente**. Este texto não afirma que o desafio esteja completo nem que exista integração pronta.
+Isto é a **Etapa 1** apenas: dados locais, sem credenciais. A Etapa 2 (backend que consultaria um sandbox) **não foi construída**. Esta entrega é uma alternativa em código. Não houve uso nem exportação do Lovable, e o prompt de referência deste repositório **não foi enviado** ao Lovable. A aceitação externa do trabalho, no curso ou em outro lugar, não está garantida. A página estática está publicada em [https://diegonbdprof-cloud.github.io/assistente-financeiro-mcp/](https://diegonbdprof-cloud.github.io/assistente-financeiro-mcp/). Esse endereço não muda o caráter da Etapa 1: os números continuam locais e fictícios. Este texto não afirma que o desafio esteja completo nem que exista integração pronta.
 
 ## Como executar
 
@@ -252,9 +252,17 @@ Imagens geradas por esse Playwright, a partir do build servido em `/assistente-f
 
 ## Publicação
 
-A página está pronta para um hospedeiro estático. O `base` do Vite é `./`, então os arquivos de `dist/` funcionam na raiz ou em `/assistente-financeiro-mcp/`, que seria o prefixo de um GitHub Pages de projeto com este nome de repositório.
+GitHub Pages está ligado neste repositório público. Em 8 de novembro de 2026 a API `GET /repos/diegonbdprof-cloud/assistente-financeiro-mcp/pages` informou:
 
-Nesta execução **não** houve alteração de configuração do repositório, **não** houve ativação de GitHub Pages e **não** há URL pública da aplicação para informar. Publicação: pendente.
+- URL: [https://diegonbdprof-cloud.github.io/assistente-financeiro-mcp/](https://diegonbdprof-cloud.github.io/assistente-financeiro-mcp/)
+- estado `built`, tipo `legacy`, origem branch `gh-pages` pasta `/`
+- HTTPS obrigatório, sem domínio próprio (`cname` nulo)
+- commit publicado: `c57e0d6b3910832bb05f67b04e9c06831a634b4a`
+- esse commit é o `dist/` de `main` `c4786495ea913eaaa085a021b61539a7c9c788e6`
+
+Na verificação seguinte, a URL respondeu HTTPS 200. O HTML, `./favicon.svg`, `./assets/index-D8faX-WS.css` e `./assets/index-CYENECMC.js` também responderam 200. No navegador, “Saldos” mostrou US$ 110,00, US$ 320,00 de dinheiro, US$ 5.430,00 de dívida e “Não informado” no cartão pessoal. “Alimentação” mostrou US$ 165,70 confirmados e US$ 15,90 pendentes. As larguras 320, 390 e 1440 não criaram rolagem horizontal. Os pedidos do navegador ficaram em `diegonbdprof-cloud.github.io`.
+
+O rodapé desse artefato ainda diz “Publicação da página: pendente.”, porque o snapshot foi gerado antes de o Pages existir. O texto vigente sobre o endereço público é este README. A página publicada continua a ser a Etapa 1: cálculo local, fixture fictícia, sem Plaid, sem Pluggy, sem MCP conectado e sem uso do Lovable.
 
 ## Limitações
 
