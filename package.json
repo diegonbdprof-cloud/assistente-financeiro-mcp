@@ -1,0 +1,26 @@
+{
+  "name": "assistente-financeiro-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Laboratório acadêmico: chat financeiro com regras locais e dados fictícios. Etapa 1, sem integração bancária.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "test": "vitest run",
+    "test:ui": "playwright test",
+    "check:dist": "node scripts/check-dist.mjs",
+    "verify": "npm test && npm run build && npm run check:dist && npm run test:ui"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "happy-dom": "^21.0.4",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}
